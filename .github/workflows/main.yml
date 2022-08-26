@@ -33,7 +33,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy
-        uses: w9jds/firebase-action@v3
+        uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
         env:
