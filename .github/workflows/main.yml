@@ -26,13 +26,11 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-      - name: Install Dependencies
-        run: npm install
       - name: Build
         run: npm run build
       - name: Deploy
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only beta
+          args: deploy --only hosting --project beta-test-24cf0
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
