@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "angular-ssr-demo-a27fd"
+    "default": "angular-ssr-demo-a27fd",
+    "beta": "beta-test-24cf0"
   }
 }
