@@ -10,7 +10,8 @@
     "dev:ssr": "ng run angular-ssr-demo:serve-ssr",
     "serve:ssr": "node dist/angular-ssr-demo/server/main.js",
     "build:ssr": "ng build && ng run angular-ssr-demo:server",
-    "prerender": "ng run angular-ssr-demo:prerender"
+    "prerender": "ng run angular-ssr-demo:prerender",
+    "hosting": "ng build && firebase use angular-ssr-demo-a27fd && firebase deploy"
   },
   "private": true,
   "dependencies": {
