@@ -6,7 +6,9 @@ name: Build and Deploy to Firebase
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "beta-test" ]
+    branches: [ "beta" ]
+  pull_request:
+    branches: [ "beta" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,11 +28,13 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+      - name: Install Dependencies
+        run: npm install
       - name: Build
         run: npm run build
       - name: Deploy
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting --project beta-test-24cf0
+          args: deploy --only beta
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
